@@ -1,0 +1,12 @@
+<project name="demo" default="package">
+<target name="clean">
+<delete dir="temp"/>
+</target>
+<target name="init" depends="clean">
+<mkdir dir="temp/classes"/>
+<mkdir dir="temp/wars"/>
+</target>
+<target name="package" depends="init">
+<war destfile="temp/wars/AntExample.war" webxml="mywebapp/WEB-INF/web.xml"/>
+</target>
+</project>
